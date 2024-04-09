@@ -1,11 +1,11 @@
 {
   "categorias": [
     {
-      "id": 1,
+      "id": "1",
       "categoria": "Pen Drive"
     },
     {
-      "id": 2,
+      "id": "2",
       "categoria": "Mouse"
     }
   ],
@@ -129,6 +129,48 @@
       "promoNumber": "109.90",
       "imagemg": "pendrives/pendrive3g.jpg",
       "imagemp": "pendrives/pendrive3p.jpg"
+    }
+  ],
+  "contatos": [
+    {
+      "id": "df4a",
+      "nome": "Jefferson",
+      "telefone": "44 998019-100",
+      "email": "jef@gmail.com",
+      "cidade": "umuarama",
+      "mensagem": "Muito bom o site!!!"
+    },
+    {
+      "id": "11ac",
+      "nome": "Giovanni",
+      "telefone": "41 99878-111",
+      "email": "gigi@gmail.com",
+      "cidade": "londrina",
+      "mensagem": "Ótimos produtos!!!"
+    },
+    {
+      "id": "d61a",
+      "nome": "Nayna",
+      "telefone": "44 99801-900",
+      "email": "nini_123_gamer@gmail.com",
+      "cidade": "cascavel",
+      "mensagem": "Produtos gamers são assim com LED!"
+    },
+    {
+      "id": "d497",
+      "nome": "Loretta",
+      "telefone": "44 11990-222",
+      "email": "loretinha23@mail.com",
+      "cidade": "foz-do-iguacu",
+      "mensagem": "Filé do Boi"
+    },
+    {
+      "id": "e6ec",
+      "nome": "Chinês",
+      "telefone": "44 99188-01900",
+      "email": "chines_da_chinas@yahoo.com",
+      "cidade": "umuarama",
+      "mensagem": "Muito bom os produtos mas os da China são melhores!"
     }
   ]
 }
