@@ -37,13 +37,11 @@ export const Select = styled.select`
   width: 100%;
   color: #fff;
   font-weight: 800;
-  font-size: 14pt;
-  background: transparent;
-  outline: none;
-  border: none;
+  font-size: 20pt;
+  background: red;
   border-bottom: solid 2px #fff;
-  margin-bottom: 2rem;
-  height: 2rem;
+  margin-bottom: 4rem;
+  height: 3rem;
 `;
 export const Textarea = styled.textarea`
   width: 100%;

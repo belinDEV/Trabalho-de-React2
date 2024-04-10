@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from 'axios';
 import { Menu } from "../../components/Menu";
 import { Botao, Container, ContainerLinear, Input, Select, Textarea, Title } from "./styles";
 
@@ -8,20 +8,20 @@ export const Contato = () => {
     nome: "",
     telefone: "",
     email: "",
-    cidade: "umuarama", // Definindo um valor padrão para o campo de seleção
+    cidade: "Toledo",
     mensagem: ""
   };
 
   const [formData, setFormData] = useState(initialState);
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     try {
       const response = await axios.post("http://localhost:3000/contatos", formData);
@@ -49,7 +49,7 @@ export const Contato = () => {
               name="nome"
               value={formData.nome}
               onChange={handleChange}
-              placeholder="Digite seu nome..."
+              placeholder="Digite seu nome:"
             />
             <Input
               required
@@ -57,7 +57,7 @@ export const Contato = () => {
               name="telefone"
               value={formData.telefone}
               onChange={handleChange}
-              placeholder="Digite seu telefone..."
+              placeholder="Seu numero de telefone:"
             />
             <Input
               required
@@ -65,26 +65,24 @@ export const Contato = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Digite seu email..."
+              placeholder="Email:"
             />
             <Select
               name="cidade"
               value={formData.cidade}
               onChange={handleChange}
             >
-              <option value='umuarama'>Umuarama</option>
-              <option value='maringa'>Maringá</option>
-              <option value='foz-do-iguacu'>Foz do Iguaçu</option>
-              <option value='londrina'>Londrina</option>
-              <option value='perobal'>Perobal</option>
-              <option value='cascavel'>Cascavel</option>
+              <option value='Toledo'>Toledo</option>
+              <option value='Sao Paulo'>Sao Paulo</option>
+              <option value='Rio de janeiro'>Rio de janeiro</option>
+              <option value='Umuarama'>Umuarama</option>
             </Select>
             <Textarea
               required
               name="mensagem"
               value={formData.mensagem}
               onChange={handleChange}
-              placeholder="Digite sua mensagem..."
+              placeholder="Envie sua observação:"
             />
             <Botao type="submit" title="Enviar">Enviar</Botao>
           </form>

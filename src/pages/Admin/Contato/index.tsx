@@ -1,5 +1,5 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import axios from 'axios';
+import { SetStateAction, useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { Button, Card, Container, DFlex, H1, H1Title, H2 } from "./styles";
 
@@ -18,7 +18,7 @@ export const AdminContato = () => {
   const [contato, setContato] = useState<IContato>()
 
   useEffect(() => {
-    axios.get('http://localhost:3000/contatos?id=' + id).then((res) => {
+    axios.get('http://localhost:3000/contatos?id=' + id).then((res: { data: SetStateAction<IContato | undefined>[]; }) => {
       setContato(res.data[0])
     }).catch((error) => {
       console.log(error)
@@ -32,7 +32,7 @@ export const AdminContato = () => {
           contato ?
             <>
               <DFlex>
-                <H1>Contato de</H1><H1Title>{contato.nome}</H1Title>
+                <H1>Nome de</H1><H1Title>{contato.nome}</H1Title>
               </DFlex>
               <Card>
                 <DFlex>

@@ -1,7 +1,7 @@
 import { FaEye } from "react-icons/fa";
 import { Button, Container, H1, TBTr, THTh, THtr, Td } from "./styles";
 import { useEffect, useState } from "react";
-import axios, { AxiosError } from "axios";
+import axios, { AxiosError } from 'axios';
 import { useNavigate } from "react-router-dom";
 
 

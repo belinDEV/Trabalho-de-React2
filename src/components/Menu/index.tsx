@@ -11,7 +11,7 @@ import {
   OpenLinksButton,
   RightContainer
 } from "./styles";
-import axios, { AxiosError } from "axios";
+import axios, { AxiosError } from 'axios';
 
 interface IDataMenu {
   id: number;

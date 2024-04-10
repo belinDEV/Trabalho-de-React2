@@ -1,11 +1,10 @@
 import { useParams } from "react-router-dom"
 import { Menu } from "../../components/Menu"
 import { Button, Col4, Col6, Input, Row, TextButton } from "./styles";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { SetStateAction, useEffect, useState } from "react";
+import axios from 'axios';
 
-//? O valor da na interface pode ser undefined
-//"nome": string | undefined, mesma coisa de cima
+
 interface IProduto {
     "id": number,
     "nome"?: string,
@@ -23,9 +22,9 @@ export const Produtos = () => {
     const [produto, setPorduto] = useState<IProduto>()
 
     useEffect(() => {
-        axios.get('http://localhost:3000/produtos?id=' + id).then((res) => {
+        axios.get('http://localhost:3000/produtos?id=' + id).then((res: { data: SetStateAction<IProduto | undefined>[]; }) => {
             setPorduto(res.data[0])
-        }).catch((error) => {
+        }).catch((error: any) => {
             console.log(error)
         })
     }, [id])
