@@ -6,7 +6,7 @@ background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
 height: 100vh;
-background-image: url(https://img.freepik.com/fotos-gratis/fones-de-ouvido-na-configuracao-de-jogos-de-cadeira_23-2149829131.jpg);
+background-image: url(https://br.pinterest.com/pin/833728949762159564/);
 `;
 export const ContainerLinear = styled.div`
   background-color: #000000e0;
